@@ -15,6 +15,9 @@ class CreateWorksTable extends Migration
     {
         Schema::create('works', function (Blueprint $table) {
             $table->id();
+	    $table->string('client');
+	    $table->string('slug')->nullable();
+	    $table->text('description');
             $table->timestamps();
         });
     }
